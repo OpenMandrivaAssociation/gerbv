@@ -7,6 +7,7 @@ Patch0:		gerbv-1.0.1-gcc4.patch.bz2
 URL:		http://gerbv.sourceforge.net
 License:	GPL 
 Group: 		Graphics
+BuildRoot:    	%{_tmppath}/%{name}-root
 BuildRequires:	gtk+2-devel glib2-devel pango-devel atk-devel freetype2-devel	
 
 %description
