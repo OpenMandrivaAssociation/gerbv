@@ -1,11 +1,10 @@
 Summary:	Gerber file viewer
 Name: 		gerbv
-Version:	1.0.1
-Release: 	%mkrel 2
-Source:		http://prdownloads.sourceforge.net/%{name}/%{name}-%{version}.tar.bz2
-Patch0:		gerbv-1.0.1-gcc4.patch.bz2
+Version:	2.0.0
+Release: 	%mkrel 1
+Source:		http://prdownloads.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
 URL:		http://gerbv.sourceforge.net
-License:	GPL 
+License:	GPLv2+
 Group: 		Graphics
 BuildRoot:    	%{_tmppath}/%{name}-root
 BuildRequires:	gtk+2-devel glib2-devel pango-devel atk-devel freetype2-devel	
@@ -25,11 +24,10 @@ Example files for gerbv.
 
 %prep
 %setup -q 
-%patch0 -p1 -b .gcc4
 
 %build
-%configure --enable-exportpng --enable-gtk2
-make all
+%configure2_5x --enable-exportpng --enable-gtk2
+%make
 
 %install
 make install DESTDIR=$RPM_BUILD_ROOT
@@ -50,10 +48,9 @@ rm -Rf $RPM_BUILD_ROOT
 %{_bindir}/gerbv
 %{_mandir}/man1/gerbv.*
 %{_datadir}/gerbv/doc/*
-%{_datadir}/gerbv/scheme/init.scm
+%{_datadir}/gerbv/scheme/*
 
 %files examples
 %defattr(-,root,root)
 %dir %{_datadir}/gerbv/example
 %{_datadir}/gerbv/example/*
-
