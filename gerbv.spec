@@ -1,7 +1,7 @@
 Summary:	Gerber file viewer
 Name: 		gerbv
 Version:	2.0.0
-Release: 	%mkrel 1
+Release: 	%mkrel 3
 Source:		http://prdownloads.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
 URL:		http://gerbv.sourceforge.net
 License:	GPLv2+
