@@ -5,7 +5,7 @@
 Summary:	Gerber file viewer
 Name: 		gerbv
 Version:	2.1.0
-Release: 	%mkrel 1
+Release: 	%mkrel 2
 Source:		http://prdownloads.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
 Patch0:		gerbv-2.1.0-fix-str-fmt.patch
 URL:		http://gerbv.sourceforge.net
