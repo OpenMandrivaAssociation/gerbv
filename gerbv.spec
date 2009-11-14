@@ -4,10 +4,9 @@
 
 Summary:	Gerber file viewer
 Name: 		gerbv
-Version:	2.1.0
-Release: 	%mkrel 2
+Version:	2.3.0
+Release: 	%mkrel 1
 Source:		http://prdownloads.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
-Patch0:		gerbv-2.1.0-fix-str-fmt.patch
 URL:		http://gerbv.sourceforge.net
 License:	GPLv2+
 Group: 		Graphics
@@ -45,7 +44,6 @@ Development files for gerbv
 
 %prep
 %setup -q
-%patch0 -p0
 
 %build
 %configure2_5x --enable-exportpng --enable-gtk2 --disable-static --disable-update-desktop-database
@@ -66,6 +64,7 @@ rm -Rf $RPM_BUILD_ROOT
 %{_bindir}/gerbv
 %{_mandir}/man1/gerbv.*
 %dir %{_datadir}/gerbv
+%{_datadir}/gerbv/gerbv_icon.ico
 %{_datadir}/gerbv/doc
 %{_datadir}/gerbv/scheme
 %_iconsdir/hicolor/*/*/*
