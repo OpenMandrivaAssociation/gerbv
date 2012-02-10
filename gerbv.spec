@@ -4,13 +4,12 @@
 
 Summary:	Gerber file viewer
 Name: 		gerbv
-Version:	2.5.0
-Release: 	%mkrel 1
+Version:	2.6.0
+Release: 	1
 Source:		http://prdownloads.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
 URL:		http://gerbv.gpleda.org/
 License:	GPLv2+
 Group: 		Graphics
-BuildRoot:    	%{_tmppath}/%{name}-root
 BuildRequires:	gtk+2-devel glib2-devel pango-devel atk-devel freetype2-devel
 Suggests:	%name-examples = %version
 
@@ -50,16 +49,12 @@ Development files for gerbv
 %make
 
 %install
-rm -fr %buildroot
 %makeinstall_std
+find %{buildroot} -name *.la -delete
 
 cp -fr doc example %buildroot%_datadir/%name
 
-%clean
-rm -Rf $RPM_BUILD_ROOT
-
 %files 
-%defattr(-,root,root)
 %doc AUTHORS ChangeLog COPYING NEWS README TODO
 %{_bindir}/gerbv
 %{_mandir}/man1/gerbv.*
@@ -71,16 +66,12 @@ rm -Rf $RPM_BUILD_ROOT
 %_datadir/applications/*.desktop
 
 %files examples
-%defattr(-,root,root)
 %{_datadir}/gerbv/example
 
 %files -n %libname
-%defattr(-,root,root)
 %_libdir/*.so.%{major}*
 
 %files -n %develname
-%defattr(-,root,root)
 %_libdir/*.so
-%_libdir/*.la
 %_libdir/pkgconfig/*.pc
 %_includedir/*
