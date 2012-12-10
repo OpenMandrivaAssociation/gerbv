@@ -75,3 +75,50 @@ cp -fr doc example %buildroot%_datadir/%name
 %_libdir/*.so
 %_libdir/pkgconfig/*.pc
 %_includedir/*
+
+
+%changelog
+* Fri Feb 10 2012 Alexander Khrukin <akhrukin@mandriva.org> 2.6.0-1
++ Revision: 772403
+- version update 2.6.0
+
+* Wed Mar 09 2011 Stéphane Téletchéa <steletch@mandriva.org> 2.5.0-1
++ Revision: 643209
+- update to new version 2.5.0
+
+* Sun Dec 05 2010 Oden Eriksson <oeriksson@mandriva.com> 2.4.0-3mdv2011.0
++ Revision: 610842
+- rebuild
+
+* Thu Feb 25 2010 Funda Wang <fwang@mandriva.org> 2.4.0-2mdv2010.1
++ Revision: 511119
+- new version 2.4.0
+
+* Sat Nov 14 2009 Funda Wang <fwang@mandriva.org> 2.3.0-1mdv2010.1
++ Revision: 466087
+- new version 2.3.0
+
+* Fri Sep 11 2009 Thierry Vignaud <tv@mandriva.org> 2.1.0-2mdv2010.0
++ Revision: 437670
+- rebuild
+
+* Sat Dec 27 2008 Funda Wang <fwang@mandriva.org> 2.1.0-1mdv2009.1
++ Revision: 319961
+- new version 2.1.0
+
+* Thu Jul 24 2008 Thierry Vignaud <tv@mandriva.org> 2.0.0-3mdv2009.0
++ Revision: 245941
+- rebuild
+
+* Thu Feb 07 2008 Funda Wang <fwang@mandriva.org> 2.0.0-1mdv2008.1
++ Revision: 163358
+- New version 2.0.0
+
+* Wed Jan 02 2008 Olivier Blin <blino@mandriva.org> 1.0.1-2mdv2008.1
++ Revision: 140735
+- restore BuildRoot
+
+  + Thierry Vignaud <tv@mandriva.org>
+    - kill re-definition of %%buildroot on Pixel's request
+    - import gerbv
+
