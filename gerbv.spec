@@ -5,12 +5,12 @@
 Summary:	Gerber file viewer
 Name: 		gerbv
 Version:	2.6.0
-Release: 	1
+Release: 	2
 Source:		http://prdownloads.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
 URL:		http://gerbv.gpleda.org/
 License:	GPLv2+
 Group: 		Graphics
-BuildRequires:	gtk+2-devel glib2-devel pango-devel atk-devel freetype2-devel
+BuildRequires:	gtk+2-devel glib2-devel pango-devel atk-devel pkgconfig(freetype2)
 Suggests:	%name-examples = %version
 
 %description
