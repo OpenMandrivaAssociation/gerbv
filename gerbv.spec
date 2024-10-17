@@ -7,7 +7,7 @@ Name: 		gerbv
 Version:	2.6.0
 Release: 	3
 Source:		http://prdownloads.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
-URL:		http://gerbv.gpleda.org/
+URL:		https://gerbv.gpleda.org/
 License:	GPLv2+
 Group: 		Graphics
 BuildRequires:	gtk+2-devel glib2-devel pango-devel atk-devel pkgconfig(freetype2)
